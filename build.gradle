@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.2.3'
+    testImplementation 'io.cucumber:cucumber-junit:7.2.3'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.1.2'
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-api', version: '4.1.2'
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.1.2'
+
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java8
+    implementation group: 'io.cucumber', name: 'cucumber-java8', version: '7.2.3'
+}
+
+test {
+    useJUnitPlatform()
+}
